@@ -1,0 +1,11 @@
+String formatDateTime(DateTime dateTime) {
+  final datePart = "${dateTime.year}-${dateTime.month.toString().padLeft(2, '0')}-${dateTime.day.toString().padLeft(2, '0')}";
+  final timePart = "${dateTime.hour.toString().padLeft(2, '0')}:${dateTime.minute.toString().padLeft(2, '0')}:${dateTime.second.toString().padLeft(2, '0')}";
+  return "$datePart $timePart";
+}
+
+void main() {
+  final now = DateTime.now();
+  final formattedDateTime = formatDateTime(now);
+  print(formattedDateTime); // Output will be in the format: yyyy-MM-dd HH:mm:ss
+}
